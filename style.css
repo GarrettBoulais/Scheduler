@@ -1,0 +1,162 @@
+/* ------------------------------------------------------ */
+/* GENERAL */
+/* ------------------------------------------------------ */
+:root {
+  --primary-color: #456990;
+  --secondary-color: #7C90A0;
+  --light-color: #E8EEF2;
+  --medium-color: #B5AA9D;
+  --dark-color: #313638;
+  --e-bg: #FF5967;
+  --max-width: 1200px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-size: 10px;
+}
+
+/* ------------------------------------------------------ */
+/* UTILITY */
+/* ------------------------------------------------------ */
+.container {
+  max-width: var(--max-width);
+  margin: auto;
+  overflow: hidden;
+}
+
+.m-heading {
+  font-size: 1.5rem;
+  padding: 0.5rem 0;
+}
+
+.bottom-line {
+  height: 2px;
+  width: 3rem;
+  background: var(--e-bg);
+  display: block;
+  margin: 0 auto 1rem auto;
+}
+/* ------------------------------------------------------ */
+/* LOGO */
+/* ------------------------------------------------------ */
+
+.navbar {
+  background: var(--primary-color);
+}
+
+.logo {
+  color: #fff;
+  font-size: 2rem;
+  padding: 0.5rem;
+}
+
+
+
+
+
+/* ------------------------------------------------------ */
+/* MAIN VIEW */
+/* ------------------------------------------------------ */
+#main-view {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+
+
+
+
+/* ------------------------------------------------------ */
+/* EMPLOYEES */
+/* ------------------------------------------------------ */
+#employees-view {
+  color: var(--light-color);
+  background: var(--dark-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 10px;
+  padding-bottom: 0.5rem;
+
+}
+
+#employees-view .employees-list {
+  padding: 0 1rem;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-gap: 1rem;
+}
+
+#employees-view .employees-list .employee {
+  background: var(--e-bg);
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding: 0.5rem 0.5rem;
+  align-items: center;
+  border-radius: 5px;
+}
+
+#employees-view .employees-list .employee img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin-right: 1.5rem;
+}
+
+
+/* ------------------------------------------------------ */
+/* SCHEDULE */
+/* ------------------------------------------------------ */
+#schedule {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: var(--secondary-color);
+  color: var(--light-color);
+  border-radius: 10px;
+  margin: 1rem 0;
+}
+
+#schedule .day {
+  padding: 0 0.5rem;
+  height: 100%;
+  flex-basis: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#schedule .day .employees-scheduled {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#schedule .day .employees-scheduled .employee-shift {
+  width: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  background: var(--dark-color);
+  border-radius: 25px;
+}
+
+#schedule .day .employees-scheduled .employee-shift .employee-initials {
+  font-size: 0.7rem;
+  padding: 0.2rem;
+  border: 1px solid var(--light-color);
+  border-radius: 50%;
+}
+
